@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="pedido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="produto" type="tipoProduto" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="tipoProduto">
+    <xs:sequence>
+      <xs:element name="nome" type="xs:string" />
+      <xs:element name="descricao" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="codigo" type="xs:string" />
+  </xs:complexType>
+</xs:schema>
